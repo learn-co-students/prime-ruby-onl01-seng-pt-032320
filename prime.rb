@@ -1,16 +1,12 @@
-def prime?(int)
- prime_int = []
-  if value <= 1 || value == 0 || value == 1
-      false
-    
-  elsif
-    (2..value - 1).each do |i|
-      prime_int <<
-      if value % i == 0
-      false
-      end
-  end
-  prime_int
-end
-end
 
+def prime?(number)
+  start = 2
+  if number > 1
+    range = (start..number-1).to_a
+    range.none? do |num_to_test| 
+      number % num_to_test == 0
+    end
+  else
+    false
+  end
+end
